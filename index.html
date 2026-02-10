@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Travelling the Mother City | Cape Town Luxury Travel Specialists</title>
+<meta name="description" content="Travelling the Mother City is a Cape Town luxury travel specialist offering luxury accommodation, private drivers, cultural experiences, and bespoke journeys curated in partnership with trusted local communities.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+font-family: 'Poppins', sans-serif;
+background: #f5f5f5;
+color: #222;
+}
+
+/* NAV */
+nav {
+position: sticky;
+top: 0;
+z-index: 1000;
+padding: 20px 60px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: #fff;
+border-bottom: 1px solid #eee;
+}
+
+nav .logo {
+font-size: 22px;
+font-weight: 700;
+}
+
+nav a {
+margin-left: 25px;
+text-decoration: none;
+color: #222;
+font-weight: 500;
+}
+
+/* HERO */
+.wrapper {
+max-width: 1200px;
+margin: 40px auto;
+background: #fff;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+min-height: 80vh;
+}
+
+/* LEFT */
+.left {
+padding: 60px 40px;
+}
+
+.left h2 {
+font-size: 30px;
+}
+
+.left .line {
+width: 60px;
+height: 3px;
+background: #222;
+margin: 15px 0 25px;
+}
+
+.left p {
+font-size: 14px;
+line-height: 1.8;
+max-width: 340px;
+}
+
+/* CENTER */
+.center {
+background: #e8c7cc;
+padding: 60px 40px;
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.center h3 {
+font-size: 18px;
+letter-spacing: 2px;
+}
+
+.center hr {
+width: 60px;
+margin: 15px auto;
+border: 1px solid #222;
+}
+
+.center p {
+margin: 8px 0;
+font-size: 14px;
+}
+
+.whatsapp {
+margin-top: 20px;
+padding: 12px;
+background: #25D366;
+color: #fff;
+text-decoration: none;
+border-radius: 4px;
+font-weight: 600;
+}
+
+/* RIGHT */
+.right {
+padding: 40px;
+text-align: right;
+}
+
+.right h1 {
+font-size: 44px;
+line-height: 1.1;
+}
+
+.right img {
+width: 100%;
+border-radius: 8px;
+margin: 20px 0;
+}
+
+.right .cta a {
+text-decoration: none;
+font-weight: 600;
+border-bottom: 2px solid #222;
+padding-bottom: 4px;
+}
+
+/* SECTIONS */
+.section {
+max-width: 1200px;
+margin: 80px auto;
+padding: 0 40px;
+}
+
+.section h2 {
+text-align: center;
+font-size: 32px;
+margin-bottom: 20px;
+}
+
+.section .intro {
+text-align: center;
+max-width: 720px;
+margin: 0 auto 40px;
+font-size: 15px;
+color: #555;
+}
+
+.grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 30px;
+}
+
+.card {
+background: #fff;
+padding: 25px;
+border-radius: 8px;
+}
+
+.card h4 {
+margin-bottom: 10px;
+font-weight: 600;
+}
+
+/* FORM */
+form {
+max-width: 600px;
+margin: auto;
+}
+
+form input, form textarea {
+width: 100%;
+padding: 12px;
+margin-bottom: 15px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+form button {
+width: 100%;
+padding: 14px;
+background: #222;
+color: #fff;
+border: none;
+font-size: 16px;
+cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+text-align: center;
+padding: 30px;
+background: #fff;
+margin-top: 60px;
+font-size: 14px;
+}
+
+/* ANIMATIONS */
+.fade-up {
+opacity: 0;
+transform: translateY(30px);
+transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-up.visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+/* MOBILE */
+@media(max-width:900px){
+.wrapper { grid-template-columns: 1fr; }
+.right { text-align: left; }
+nav { padding: 20px; }
+}
+
+@media(max-width:600px){
+.right h1 { font-size: 34px; }
+.left, .center, .right { padding: 30px 20px; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">Travelling the Mother City</div>
+<div>
+<a href="#">Home</a>
+<a href="#experiences">Experiences</a>
+<a href="#contact">Book</a>
+</div>
+</nav>
+
+<div class="wrapper">
+
+<div class="left fade-up">
+<h2>About Us</h2>
+<div class="line"></div>
+<p>
+Travelling the Mother City is a Cape Town luxury travel specialist built on deep local knowledge.
+We design private, curated experiences that combine luxury accommodation, cultural immersion,
+private drivers, and iconic destinations — delivered with comfort, safety, and authenticity.
+</p>
+</div>
+
+<div class="center fade-up">
+<h3>VIP CONTACT</h3>
+<hr>
+<p>info@capetownluxurytravel.com</p>
+<a class="whatsapp"
+href="https://wa.me/27834491612?text=Hello%20Travelling%20the%20Mother%20City%2C%20I%20would%20like%20to%20design%20a%20private%20Cape%20Town%20experience."
+target="_blank">
+WhatsApp Us
+</a>
+</div>
+
+<div class="right fade-up">
+<h1>Travelling<br>the<br>Mother City</h1>
+<img loading="lazy"
+src="https://static.vecteezy.com/system/resources/previews/028/159/350/large_2x/sunset-over-table-mountain-and-downtown-cape-town-south-africa-aerial-panoramic-view-of-cape-town-cityscape-at-sunset-ai-generated-free-photo.jpg"
+alt="Luxury Cape Town cityscape with Table Mountain at sunset">
+<div class="cta">
+<p>Luxury · Culture · Local Expertise</p>
+<a href="#contact">Design My Private Experience</a>
+</div>
+</div>
+
+</div>
+
+<section id="experiences" class="section fade-up">
+<h2>Signature Experiences</h2>
+<p class="intro">
+Our experiences are private or small-group only and curated in partnership with trusted local
+communities — offering a respectful, meaningful way of travelling the Mother City.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h4>Luxury Accommodation</h4>
+<p>
+Handpicked villas, boutique hotels, and premium apartments through trusted local partners,
+selected for comfort, privacy, and prime locations.
+</p>
+</div>
+
+<div class="card">
+<h4>Private Driver & Chauffeur</h4>
+<p>
+A dedicated private driver providing seamless, safe, and comfortable travel throughout Cape Town,
+allowing you to explore at your own pace.
+</p>
+</div>
+
+<div class="card">
+<h4>Signature Cultural Experience</h4>
+<p>
+A private or small-group cultural journey into Cape Town’s communities, designed in partnership
+with trusted local residents and community guides. Guests enjoy authentic storytelling, history,
+music, and a locally hosted food experience.
+</p>
+<p>
+This signature experience includes a private driver, ensuring comfort, safety, and meaningful
+cultural exchange throughout the journey.
+</p>
+</div>
+
+<div class="card">
+<h4>Wine Estates</h4>
+<p>
+Private tastings across Stellenbosch and Franschhoek with carefully selected local partners.
+</p>
+</div>
+
+<div class="card">
+<h4>Ocean Experiences</h4>
+<p>
+Yacht cruises, seal encounters, and sunset champagne tours along the Atlantic coastline.
+</p>
+</div>
+
+<div class="card">
+<h4>Curated Beaches</h4>
+<p>
+Relaxed days at Clifton, Camps Bay, and Llandudno, selected for scenery, privacy, and atmosphere.
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="contact" class="section fade-up">
+<h2>Book Your Experience</h2>
+
+<form action="https://formspree.io/f/yourformid" method="POST">
+<input type="text" name="name" placeholder="Full Name" required>
+<input type="email" name="email" placeholder="Email Address" required>
+<textarea name="message" rows="5" placeholder="Tell us about your Cape Town plans"></textarea>
+<button type="submit">Submit Request</button>
+<p style="font-size:12px; text-align:center; color:#666;">
+We respond personally within 24 hours.
+</p>
+</form>
+</section>
+
+<footer>
+© 2025 Travelling the Mother City · Cape Town Luxury Travel Specialists
+</footer>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+}
+});
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

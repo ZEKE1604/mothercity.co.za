@@ -292,10 +292,21 @@ transform: translateY(0);
     align-items: center;
     padding: 8px 5%;
     gap: 10px
-.wrapper { grid-template-columns: 1fr; }
-.right { text-align: left; }
-.luxury-header .container { padding: 8px 5%; }
-luxury-header img { height: 25px;
+  }
+  .luxury-header .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 5px;
+  }
+  .luxury-header .nav-menu a {
+    font-size: 16px;
+  }
+  .luxury-header .nav-menu .cta-button {
+    width: 16px
+    padding: 10px 20px;
+  }
 }
 
 @media(max-width:600px){
@@ -469,6 +480,7 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
 </body>
 </html>
+
 
 
 

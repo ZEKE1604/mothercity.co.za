@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Travelling the Mother City | Cape Town Luxury Travel Specialists</title>
-<meta name="description" content="Travelling the Mother City is a Cape Town luxury travel specialist offering luxury accommodation, private drivers, cultural experiences, and bespoke journeys curated in partnership with trusted local communities.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,54 +14,6 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 
-  /* Hamburger hidden on desktop */
-.hamburger {
-display: none;
-flex-direction: column;
-cursor: pointer;
-gap: 5px;
-}
-
-.hamburger span {
-width: 25px;
-height: 3px;
-background: #d4af37;
-border-radius: 2px;
-}
-
-/* MOBILE ONLY */
-@media(max-width: 768px) {
-
-.hamburger {
-display: flex; /* show hamburger */
-}
-
-.nav-menu {
-display: none; /* hide menu by default */
-flex-direction: column;
-width: 100%;
-background: rgba(0,0,0,0.9);
-padding: 15px 0;
-margin-top: 10px;
-border-radius: 4px;
-}
-
-.nav-menu.active {
-display: flex; /* show when clicked */
-}
-
-.nav-menu a {
-text-align: center;
-padding: 10px 0;
-font-size: 16px;
-}
-
-.luxury-header .container {
-flex-wrap: wrap;
-}
-}
-
-
 body {
 font-family: 'Poppins', sans-serif;
 background: #f5f5f5;
@@ -71,8 +22,9 @@ padding-top: 110px;
 }
 
 /* ============================= */
-/* ULTRA LUXURY TRANSPARENT HEADER WITH GOLD CTA */
+/* LUXURY TRANSPARENT HEADER */
 /* ============================= */
+
 .luxury-header {
 position: fixed;
 top: 0;
@@ -88,112 +40,95 @@ transition: all 0.4s ease;
 display: flex;
 justify-content: space-between;
 align-items: center;
-flex-wrap: wrap;
-padding: 10px 5px;
-gap: 15px
+padding: 12px 5%;
 }
 
+/* Logo */
 .luxury-header img {
-height: 100px;
+height: 80px;
 width: auto;
-max-width: 100%
-transition: transform 0.3s ease;
+max-width: 100%;
 }
 
-.luxury-header img:hover {
-transform: scale(1.05);
+/* Desktop Nav */
+.luxury-header .nav-menu {
+display: flex;
+align-items: center;
+gap: 30px;
 }
 
-luxury-header .nav-menu {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gaps: 20px;
-}
-
-luxury-header .nav-menu a {
-  colour :d4af37;
-  fot-weight: 500;
-  text-decoration: none;
-  font-size: 14px;
-  white-space: nowrap;
-  transition: all 0.3s ease;
-}
-
-.luxury-header .nav-menu a:hover {
-  colour: #f1d47a;
-}
-
-.nav-menu a {
-margin-left: 35px;
-text-decoration: none;
+.luxury-header .nav-menu a {
 color: #d4af37;
-font-weight: 400;
-letter-spacing: 1px;
+font-weight: 500;
+text-decoration: none;
 font-size: 14px;
-position: relative;
 transition: all 0.3s ease;
 }
 
-.nav-menu a::after {
-content: "";
-position: absolute;
-bottom: -6px;
-left: 0;
-width: 0;
-height: 1px;
-background: #d4af37;
-transition: width 0.3s ease;
+.luxury-header .nav-menu a:hover {
+color: #f1d47a;
 }
 
-.nav-menu a:hover::after {
-width: 100%;
-}
-
+/* CTA */
 .cta-button {
 background: #d4af37;
 color: black !important;
 padding: 10px 22px;
 border-radius: 2px;
 font-weight: 600;
-transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-background: #f1d47a;
-transform: translateY(-2px);
 }
 
 /* ============================= */
-/* Keep all your original CSS below unchanged */
+/* HAMBURGER */
 /* ============================= */
 
-/* NAV (original) */
-nav {
-position: sticky;
-top: 0;
-z-index: 1000;
-padding: 20px 60px;
+.hamburger {
+display: none;
+flex-direction: column;
+cursor: pointer;
+gap: 5px;
+}
+
+.hamburger span {
+width: 25px;
+height: 3px;
+background: #d4af37;
+border-radius: 2px;
+}
+
+/* Mobile */
+@media(max-width: 768px) {
+
+.hamburger {
 display: flex;
-justify-content: space-between;
-align-items: center;
-background: #fff;
-border-bottom: 1px solid #eee;
 }
 
-nav .logo img {
-font-width: 350px;
-font-height: auto;
+.luxury-header .nav-menu {
+display: none;
+flex-direction: column;
+width: 100%;
+background: rgba(0,0,0,0.9);
+padding: 15px 0;
+margin-top: 10px;
+border-radius: 4px;
 }
 
-nav a {
-margin-left: 25px;
-text-decoration: none;
-color: #222;
-font-weight: 500;
+.luxury-header .nav-menu.active {
+display: flex;
 }
 
-/* HERO */ .wrapper {
+.luxury-header .nav-menu a {
+text-align: center;
+padding: 10px 0;
+font-size: 16px;
+}
+}
+
+/* ============================= */
+/* HERO SECTION */
+/* ============================= */
+
+.wrapper {
 max-width: 1200px;
 margin: 40px auto;
 background: #fff;
@@ -203,17 +138,7 @@ min-height: 80vh;
 }
 
 .left { padding: 60px 40px; }
-
 .left h2 { font-size: 30px; }
-
-.left .line {
-width: 60px;
-height: 3px;
-background: #222;
-margin: 15px 0 25px;
-}
-
-.left p { font-size: 14px; line-height: 1.8; max-width: 340px; }
 
 .center {
 background: #e8c7cc;
@@ -224,309 +149,70 @@ flex-direction: column;
 justify-content: center;
 }
 
-.center h3 { font-size: 18px; letter-spacing: 2px; }
-
-.center hr { width: 60px; margin: 15px auto; border: 1px solid #222; }
-
-.center p { margin: 8px 0; font-size: 14px; }
-
-.whatsapp {
-margin-top: 20px;
-padding: 12px;
-background: #25D366;
-color: #fff;
-text-decoration: none;
-border-radius: 4px;
-font-weight: 600;
-}
-
 .right { padding: 40px; text-align: right; }
-
 .right h1 { font-size: 44px; line-height: 1.1; }
-
 .right img { width: 100%; border-radius: 8px; margin: 20px 0; }
 
-.right .cta a {
-text-decoration: none;
-font-weight: 600;
-border-bottom: 2px solid #222;
-padding-bottom: 4px;
+@media(max-width:900px){
+.wrapper { grid-template-columns: 1fr; }
+.right { text-align: left; }
 }
-
-/* SECTIONS */
-.section {
-max-width: 1200px;
-margin: 80px auto;
-padding: 0 40px;
-}
-
-.section h2 {
-text-align: center;
-font-size: 32px;
-margin-bottom: 20px;
-}
-
-.section .intro {
-text-align: center;
-max-width: 720px;
-margin: 0 auto 40px;
-font-size: 15px;
-color: #555;
-}
-
-.grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 30px;
-}
-
-.card {
-background: #fff;
-padding: 25px;
-border-radius: 8px;
-}
-
-.card h4 { margin-bottom: 10px; font-weight: 600; }
-
-/* FORM */
-form {
-max-width: 600px;
-margin: auto;
-}
-
-form input, form textarea {
-width: 100%;
-padding: 12px;
-margin-bottom: 15px;
-border: 1px solid #ccc;
-border-radius: 4px;
-}
-
-form button {
-width: 100%;
-padding: 14px;
-background: #222;
-color: #fff;
-border: none;
-font-size: 16px;
-cursor: pointer;
-}
-
-/* FOOTER */
-footer {
-text-align: center;
-padding: 30px;
-background: #fff;
-margin-top: 60px;
-font-size: 14px;
-}
-
-/* ANIMATIONS */
-.fade-up {
-opacity: 0;
-transform: translateY(30px);
-transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-up.visible {
-opacity: 1;
-transform: translateY(0);
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .luxury-header .container {
-    flex-direction: column;
-    align-items: center;
-    padding: 8px 5%;
-    gap: 10px
-  }
-  .luxury-header .nav-menu {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-    margin-top: 5px;
-  }
-  .luxury-header .nav-menu a {
-    font-size: 16px;
-  }
-  .luxury-header .nav-menu .cta-button {
-    width: 16px
-    padding: 10px 20px;
-  }
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- Transparent Gold Header with Logo -->
-
 <header class="luxury-header">
 <div class="container">
+
 <a href="index.html">
 <img src="logo.png" alt="Travelling the Mother City Logo">
 </a>
+
+<div class="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
 <nav class="nav-menu">
 <a href="#experiences">Experiences</a>
 <a href="#about">About</a>
 <a href="#security">Security</a>
 <a href="#contact" class="cta-button">Enquire Now</a>
 </nav>
+
 </div>
 </header>
 
-<!-- ============================= -->
-<!-- KEEP REST OF YOUR ORIGINAL WEBSITE CONTENT BELOW -->
-<!-- ============================= -->
-
 <div class="wrapper">
 
-<div class="left fade-up">
+<div class="left">
 <h2>About Us</h2>
-<div class="line"></div>
 <p>
 Travelling the Mother City is a Cape Town luxury travel specialist built on deep local knowledge.
-We design private, curated experiences that combine luxury accommodation, cultural immersion,
-private drivers, and iconic destinations — delivered with comfort, safety, and authenticity.
 </p>
 </div>
 
-<div class="center fade-up">
+<div class="center">
 <h3>VIP CONTACT</h3>
-<hr>
 <p>info@mothercity.co.za</p>
-<a class="whatsapp"
-href="https://wa.me/27834491612?text=Hello%20Travelling%20the%20Mother%20City%2C%20I%20would%20like%20to%20design%20a%20private%20Cape%20Town%20experience."
-target="_blank">
-WhatsApp Us
-</a>
 </div>
 
-<div class="right fade-up">
+<div class="right">
 <h1>Travelling<br>the<br>Mother City</h1>
-<img loading="lazy"
-src="https://static.vecteezy.com/system/resources/previews/028/159/350/large_2x/sunset-over-table-mountain-and-downtown-cape-town-south-africa-aerial-panoramic-view-of-cape-town-cityscape-at-sunset-ai-generated-free-photo.jpg"
-alt="Luxury Cape Town cityscape with Table Mountain at sunset">
-<div class="cta">
-<p>Luxury · Culture · Local Expertise</p>
-<a href="#contact">Design My Private Experience</a>
-</div>
+<img src="https://static.vecteezy.com/system/resources/previews/028/159/350/large_2x/sunset-over-table-mountain-and-downtown-cape-town-south-africa-aerial-panoramic-view-of-cape-town-cityscape-at-sunset-ai-generated-free-photo.jpg">
 </div>
 
 </div>
-
-<section id="experiences" class="section fade-up">
-<h2>Signature Experiences</h2>
-<p class="intro">
-Our experiences are private or small-group only and curated in partnership with trusted local
-communities — offering a respectful, meaningful way of travelling the Mother City.
-</p>
-
-<div class="grid">
-
-<div class="card">
-<h4>Luxury Accommodation</h4>
-<p>
-Handpicked villas, boutique hotels, and premium apartments through trusted local partners,
-selected for comfort, privacy, and prime locations.
-</p>
-</div>
-
-<div class="card">
-<h4>Private Driver & Chauffeur</h4>
-<p>
-A dedicated private driver providing seamless, safe, and comfortable travel throughout Cape Town,
-allowing you to explore at your own pace.
-</p>
-</div>
-
-<div class="card">
-<h4>Signature Cultural Experience</h4>
-<p>
-A private or small-group cultural journey into Cape Town’s communities, designed in partnership
-with trusted local residents and community guides. Guests enjoy authentic storytelling, history,
-music, and a locally hosted food experience.
-</p>
-<p>
-This signature experience includes a private driver, ensuring comfort, safety, and meaningful
-cultural exchange throughout the journey.
-</p>
-</div>
-
-<div class="card">
-<h4>Wine Estates</h4>
-<p>
-Private tastings across Stellenbosch, Franschhoek, Groot Constantia and plenty more with carefully selected local partners.
-</p>
-</div>
-
-<div class="card">
-<h4>Ocean Experiences</h4>
-<p>
-Yacht cruises, seal encounters, and sunset champagne tours along the Atlantic coastline.
-</p>
-</div>
-
-<div class="card">
-<h4>Curated Beaches</h4>
-<p>
-Relaxed days at Clifton, Camps Bay, and Llandudno, selected for scenery, privacy, and atmosphere free.
-</p>
-</div>
-
-<div class="card">
-<h4>Bucket-list Activities</h4>
-<p>
-Elevate your journey with unforgettable experiences such as paragliding, shark cage diving, sky diving and quad biking on the
-dunes.
-</p>
-<p>
-  Let us know how you'd like to customise your adventure - we'll design it around you
-</p>
-</div>
-
-</div>
-</section>
-
-<section id="contact" class="section fade-up">
-<h2>Book Your Experience</h2>
-
-<form action="https://formspree.io/f/mwvnvlqg" method="POST">
-<input type="text" name="name" placeholder="Full Name" required>
-<input type="email" name="email" placeholder="Email Address" required>
-<textarea name="message" rows="5" placeholder="Tell us about your Cape Town plans"></textarea>
-<button type="submit">Submit Request</button>
-<p style="font-size:12px; text-align:center; color:#666;">
-We respond personally within 24 hours.
-</p>
-</form>
-</section>
-
-<footer>
-© 2025 Travelling the Mother City · Cape Town Luxury Travel Specialists
-</footer>
 
 <script>
-const observer = new IntersectionObserver(entries => {
-entries.forEach(entry => {
-if (entry.isIntersecting) {
-entry.target.classList.add('visible');
-}
-});
-}, { threshold: 0.15 });
-
-document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-if (hamburger) { hamburger.addEventListener('click', () => {
+hamburger.addEventListener('click', () => {
 navMenu.classList.toggle('active');
 });
-}
 </script>
 
 </body>

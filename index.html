@@ -40,12 +40,15 @@ transition: all 0.4s ease;
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: 11px 50px;
+flex-wrap: wrap;
+padding: 10px 5px;
+gap: 15px
 }
 
 .luxury-header img {
-height: 120px;
-widt: auto;
+height: 100px;
+width: auto;
+max-width: 100%
 transition: transform 0.3s ease;
 }
 
@@ -53,11 +56,19 @@ transition: transform 0.3s ease;
 transform: scale(1.05);
 }
 
+luxury-header .nav-menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gaps: 20px;
+}
+
 luxury-header .nav-menu a {
   colour :d4af37;
   fot-weight: 500;
   text-decoration: none;
   font-size: 14px;
+  white-space: nowrap;
   transition: all 0.3s ease;
 }
 
@@ -275,10 +286,10 @@ transform: translateY(0);
 }
 
 /* MOBILE */
-@media(max-width:900px){
+@media(max-width:768px){
 .wrapper { grid-template-columns: 1fr; }
 .right { text-align: left; }
-.luxury-header .container { padding: 10px 20px; }
+.luxury-header .container { padding: 8px 5%; }
 luxury-header img { height: 60px;
 }
 
@@ -286,6 +297,7 @@ luxury-header img { height: 60px;
 .right h1 { font-size: 34px; }
 .left, .center, .right { padding: 30px 20px; }
 }
+
 </style>
 </head>
 
@@ -452,6 +464,7 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
 </body>
 </html>
+
 
 
 

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Travelling the Mother City | Cape Town Luxury Travel & Secure Hospitality Specialists</title>
-<meta name="description" content=" At Travelling the Mother City we are specialist in Cape Town offering luxury accommodation, private drivers, cultural experiences, and bespoke journeys curated in partnership with trusted local communities. Your experience matters to us and our saftey is our top priority, Welcome to the mothercity in the motherland.">
+<meta name="description" content="At Travelling the Mother City we are specialist in Cape Town offering luxury accommodation, private drivers, cultural experiences, and bespoke journeys curated in partnership with trusted local communities. Your experience matters to us and our saftey is our top priority, Welcome to the mothercity in the motherland.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,6 @@ html { scroll-behavior: smooth; }
 
 /* ============================= */
 /* HAMBURGER NAVIGATION */
-/* ============================= */
 .hamburger {
 display: none;
 flex-direction: column;
@@ -35,21 +34,24 @@ border-radius: 2px;
 /* MOBILE ONLY */
 @media(max-width: 768px) {
 .hamburger {
-display: none; /* show hamburger */
+display: flex;
 }
 
 .nav-menu {
-display: none; /* hide menu by default */
+max-height: 0;
+overflow: hidden;
 flex-direction: column;
 width: 100%;
 background: rgba(0,0,0,0.9);
-padding: 15px 0;
+padding: 0;
 margin-top: 10px;
 border-radius: 4px;
+transition: max-height 0.4s ease, padding 0.4s ease;
 }
 
-.nav-menu.collapse {
-display: flex; /* show when clicked */
+.nav-menu.active {
+max-height: 500px;
+padding: 15px 0;
 }
 
 .nav-menu a {
@@ -282,37 +284,86 @@ opacity: 1;
 transform: translateY(0);
 }
 
-/* MOBILE WRAPPER ADJUSTMENTS */
-@media(max-width:768px){
-.luxury-header .container {
-flex-direction: column;
-align-items: center;
-padding: 8px 5%;
-gap: 10px
+/* ============================= */
+/* SIGNATURE EXPERIENCE & SECURITY PREMIUM */
+.signature-premium {
+background: #111;
+color: #f1d47a;
+padding: 60px 40px;
+border-radius: 12px;
+box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+margin: 80px auto;
+max-width: 1200px;
 }
-.luxury-header .nav-menu {
-flex-direction: column;
-align-items: center;
-gap: 10px;
-width: 100%;
-margin-top: 5px;
+
+.signature-premium h2 {
+text-align: center;
+font-size: 34px;
+color: #d4af37;
+margin-bottom: 15px;
 }
-.luxury-header .nav-menu a {
+
+.signature-premium .line-gold {
+width: 60px;
+height: 3px;
+background: #d4af37;
+margin: 0 auto 25px;
+}
+
+.signature-premium .intro {
+text-align: center;
 font-size: 16px;
+color: #f1d47a;
+max-width: 720px;
+margin: 0 auto 40px;
+font-weight: 500;
 }
-.luxury-header .nav-menu .cta-button {
-width: auto;
-padding: 10px 20px;
+
+.signature-premium .signature-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 30px;
 }
+
+.signature-premium .card {
+background: #1a1a1a;
+border: 2px solid #d4af37;
+padding: 25px;
+border-radius: 10px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+text-align: center;
+}
+
+.signature-premium .card:hover {
+transform: translateY(-6px);
+box-shadow: 0 12px 25px rgba(212,175,55,0.4);
+}
+
+.signature-premium .card h4 {
+margin-bottom: 12px;
+color: #d4af37;
+font-weight: 600;
+font-size: 20px;
+}
+
+.signature-premium .card p {
+color: #f1d47a;
+font-size: 14px;
+line-height: 1.7;
+}
+
+.signature-premium .security-logo {
+width: 100px;
+margin-top: 15px;
+display: block;
+margin-left: auto;
+margin-right: auto;
 }
 </style>
 </head>
-
 <body>
 
-<!-- ============================= -->
-<!-- TRANSPARENT HEADER WITH HAMBURGER -->
-<!-- ============================= -->
+<!-- HEADER -->
 <header class="luxury-header">
 <div class="container">
 <a href="index.html">
@@ -334,11 +385,8 @@ padding: 10px 20px;
 </div>
 </header>
 
-<!-- ============================= -->
-<!-- WRAPPER / CONTENT -->
-<!-- ============================= -->
+<!-- WRAPPER -->
 <div class="wrapper">
-
 <!-- LEFT ABOUT -->
 <div class="left fade-up" id="about">
 <h2>About Us</h2>
@@ -356,9 +404,7 @@ an unique location with amazing scenery.
 <h3>VIP CONTACT</h3>
 <hr>
 <p>info@mothercity.co.za</p>
-<a class="whatsapp"
-href="https://wa.me/27834491612?text=Hello%20Travelling%20the%20Mother%20City%2C%20I%20would%20like%20to%20design%20a%20private%20Cape%20Town%20experience."
-target="_blank">
+<a class="whatsapp" href="https://wa.me/27834491612?text=Hello%20Travelling%20the%20Mother%20City%2C%20I%20would%20like%20to%20design%20a%20private%20Cape%20Town%20experience." target="_blank">
 WhatsApp Us
 </a>
 </div>
@@ -366,124 +412,70 @@ WhatsApp Us
 <!-- RIGHT HERO IMAGE -->
 <div class="right fade-up">
 <h1>Travelling<br>the<br>Mother City</h1>
-<img loading="lazy"
-src="https://static.vecteezy.com/system/resources/previews/028/159/350/large_2x/sunset-over-table-mountain-and-downtown-cape-town-south-africa-aerial-panoramic-view-of-cape-town-cityscape-at-sunset-ai-generated-free-photo.jpg"
-alt="Luxury Cape Town cityscape with Table Mountain at sunset">
+<img loading="lazy" src="https://static.vecteezy.com/system/resources/previews/028/159/350/large_2x/sunset-over-table-mountain-and-downtown-cape-town-south-africa-aerial-panoramic-view-of-cape-town-cityscape-at-sunset-ai-generated-free-photo.jpg" alt="Luxury Cape Town cityscape with Table Mountain at sunset">
 <div class="cta">
 <p>Luxury · Culture · Local Expertise</p>
 <a href="#contact">Design My Private Experience</a>
 </div>
 </div>
-
 </div>
 
-<!-- ============================= -->
-<!-- EXPERIENCES SECTION -->
-<!-- ============================= -->
+<!-- EXPERIENCES -->
 <section id="experiences" class="section fade-up">
 <h2>Signature Experiences</h2>
-<p class="intro">
-Our experiences are private or small-group only and curated in partnership with trusted local
-communities — offering a respectful, meaningful way of travelling the Mother City.
-</p>
-
+<p class="intro">Our experiences are private or small-group only and curated in partnership with trusted local communities — offering a respectful, meaningful way of travelling the Mother City.</p>
 <div class="grid">
-
-<div class="card">
-<h4>Luxury Accommodation</h4>
-<p>
-Handpicked villas, boutique hotels, and premium apartments through trusted local partners,
-selected for comfort, privacy, and prime locations.
-</p>
-</div>
-
-<div class="card">
-<h4>Private Driver & Chauffeur</h4>
-<p>
-A dedicated private driver providing seamless, safe, and comfortable travel throughout Cape Town,
-allowing you to explore at your own pace.
-</p>
-</div>
-
-<div class="card">
-<h4>Signature Cultural Experience</h4>
-<p>
-A private or small-group cultural journey into Cape Town’s communities, designed in partnership
-with trusted local residents and community guides. Guests enjoy authentic storytelling, history,
-music, and a locally hosted food experience.
-</p>
-<p>
-This signature experience includes a private driver, ensuring comfort, safety, and meaningful
-cultural exchange throughout the journey.
-</p>
-</div>
-
-<div class="card">
-<h4>Wine Estates</h4>
-<p>
-Private tastings across Stellenbosch, Franschhoek, Groot Constantia and plenty more with carefully selected local partners.
-</p>
-</div>
-
-<div class="card">
-<h4>Ocean Experiences</h4>
-<p>
-Yacht cruises, seal encounters, and sunset champagne tours along the Atlantic coastline.
-</p>
-</div>
-
-<div class="card">
-<h4>Curated Beaches</h4>
-<p>
-Relaxed days at Clifton, Camps Bay, and Llandudno, selected for scenery, privacy, and atmosphere free.
-</p>
-</div>
-
-<div class="card">
-<h4>Bucket-list Activities</h4>
-<p>
-Elevate your journey with unforgettable experiences such as paragliding, shark cage diving, sky diving and quad biking on the
-dunes.
-</p>
-<p>
-Let us know how you'd like to customise your adventure - we'll design it around you
-</p>
-</div>
-
+<div class="card"><h4>Luxury Accommodation</h4><p>Handpicked villas, boutique hotels, and premium apartments through trusted local partners, selected for comfort, privacy, and prime locations.</p></div>
+<div class="card"><h4>Private Driver & Chauffeur</h4><p>A dedicated private driver providing seamless, safe, and comfortable travel throughout Cape Town, allowing you to explore at your own pace.</p></div>
+<div class="card"><h4>Signature Cultural Experience</h4><p>A private or small-group cultural journey into Cape Town’s communities, designed in partnership with trusted local residents and community guides. Guests enjoy authentic storytelling, history, music, and a locally hosted food experience.</p><p>This signature experience includes a private driver, ensuring comfort, safety, and meaningful cultural exchange throughout the journey.</p></div>
+<div class="card"><h4>Wine Estates</h4><p>Private tastings across Stellenbosch, Franschhoek, Groot Constantia and plenty more with carefully selected local partners.</p></div>
+<div class="card"><h4>Ocean Experiences</h4><p>Yacht cruises, seal encounters, and sunset champagne tours along the Atlantic coastline.</p></div>
+<div class="card"><h4>Curated Beaches</h4><p>Relaxed days at Clifton, Camps Bay, and Llandudno, selected for scenery, privacy, and atmosphere free.</p></div>
+<div class="card"><h4>Bucket-list Activities</h4><p>Elevate your journey with unforgettable experiences such as paragliding, shark cage diving, sky diving and quad biking on the dunes.</p><p>Let us know how you'd like to customise your adventure - we'll design it around you</p></div>
 </div>
 </section>
 
-<!-- ============================= -->
+<!-- SIGNATURE EXPERIENCE & SECURITY PREMIUM -->
+<section id="signature" class="section signature-premium fade-up">
+<div class="container">
+<h2>Signature Experience & Security Specialist</h2>
+<div class="line-gold"></div>
+<p class="intro">Travelling the Mother City goes beyond luxury. We partner with <strong>Hawk Associates</strong>, providing expert security services so every journey is safe, private, and unforgettable.</p>
+<div class="grid signature-grid">
+<div class="card">
+<h4>Security Specialist</h4>
+<p>In collaboration with <strong>Hawk Associates</strong>, our security experts ensure discreet, professional protection during your stay. Every itinerary is vetted for safety, privacy, and peace of mind.</p>
+<img src="hawk-logo.png" alt="Hawk Associates Logo" class="security-logo">
+</div>
+<div class="card">
+<h4>Exclusive Signature Experience</h4>
+<p>Unique private experiences designed by our local experts — from hidden cultural gems to exclusive wine estates. Every journey is tailored to your preferences, ensuring an unforgettable Cape Town adventure.</p>
+</div>
+</div>
+</div>
+</section>
+
 <!-- SECURITY SECTION -->
-<!-- ============================= -->
 <section id="security" class="section fade-up">
 <h2>Security & Safety</h2>
 <p class="intro">
-Travelling the Mother City prioritizes your safety. Our private drivers, vetted partners, and trusted local guides ensure
-you enjoy your luxury Cape Town experience with complete peace of mind.
+Travelling the Mother City prioritizes your safety. Our private drivers, vetted partners, and trusted local guides ensure you enjoy your luxury Cape Town experience with complete peace of mind.
 </p>
 </section>
 
-<!-- ============================= -->
 <!-- CONTACT FORM -->
-<!-- ============================= -->
 <section id="contact" class="section fade-up">
 <h2>Book Your Experience</h2>
-
 <form action="https://formspree.io/f/mwvnvlqg" method="POST">
 <input type="text" name="name" placeholder="Full Name" required>
 <input type="email" name="email" placeholder="Email Address" required>
 <textarea name="message" rows="5" placeholder="Tell us about your Cape Town plans"></textarea>
 <button type="submit">Submit Request</button>
-<p style="font-size:12px; text-align:center; color:#666;">
-We respond personally within 24 hours.
-</p>
+<p style="font-size:12px; text-align:center; color:#666;">We respond personally within 24 hours.</p>
 </form>
 </section>
 
-<!-- ============================= -->
 <!-- FOOTER -->
-<!-- ============================= -->
 <footer>
 © 2025 Travelling the Mother City · Cape Town Luxury Travel Specialists
 </footer>
@@ -491,29 +483,23 @@ We respond personally within 24 hours.
 <script>
 // Fade-up animations
 const observer = new IntersectionObserver(entries => {
-entries.forEach(entry => {
-if (entry.isIntersecting) {
-entry.target.classList.add('visible');
-}
-});
+entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); } });
 }, { threshold: 0.15 });
-
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
 // Hamburger menu toggle
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
-
 if (hamburger) {
 hamburger.addEventListener('click', () => {
 navMenu.classList.toggle('active');
-navMenu.classList.toggle('collapse');
 });
 }
 </script>
 
 </body>
 </html>
+
 
 
 

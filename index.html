@@ -379,7 +379,7 @@ margin-right: auto;
 <nav class="nav-menu">
 <a href="#experiences">Experiences</a>
 <a href="#about">About</a>
-<a href="#security">Security</a>
+<a href="#signature">Security</a>
 <a href="#contact" class="cta-button">Enquire Now</a>
 </nav>
 </div>
@@ -440,11 +440,17 @@ WhatsApp Us
 <div class="container">
 <h2>Signature Experience & Security Specialist</h2>
 <div class="line-gold"></div>
-<p class="intro">Travelling the Mother City goes beyond luxury. We partner with <strong>Hawk Associates</strong>, providing expert security services so every journey is safe, private, and unforgettable.</p>
+<p class="intro">
+Travelling the Mother City goes beyond luxury. We partner with
+<a href="https://hawkassociates.co.za" target="_blank" style="color:#d4af37; font-weight:bold; text-decoration:underline;">Hawk Associates</a>, providing expert security services so every journey is safe, private, and unforgettable.
+</p>
 <div class="grid signature-grid">
 <div class="card">
 <h4>Security Specialist</h4>
-<p>In collaboration with <strong>Hawk Associates</strong>, our security experts ensure discreet, professional protection during your stay. Every itinerary is vetted for safety, privacy, and peace of mind.</p>
+<p>
+In collaboration with
+<a href="https://hawkassociates.co.za" target="_blank" style="color:#d4af37; font-weight:bold; text-decoration:underline;">Hawk Associates</a>, our security experts ensure discreet, professional protection during your stay. Every itinerary is vetted for safety, privacy, and peace of mind.
+</p>
 <img src="hawk-logo.png" alt="Hawk Associates Logo" class="security-logo">
 </div>
 <div class="card">
@@ -495,10 +501,20 @@ hamburger.addEventListener('click', () => {
 navMenu.classList.toggle('active');
 });
 }
+
+// Collapse mobile menu after clicking a link
+document.querySelectorAll('.nav-menu a').forEach(link => {
+link.addEventListener('click', () => {
+if (navMenu.classList.contains('active')) {
+navMenu.classList.remove('active');
+}
+});
+});
 </script>
 
 </body>
 </html>
+
 
 
 

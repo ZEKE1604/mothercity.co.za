@@ -3,224 +3,294 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Travelling The Mother City</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Travelling the Mother City | Cape Town Luxury Travel & Secure Hospitality Specialists</title>
+<meta name="description" content="Luxury Cape Town travel specialists offering curated experiences, private drivers, cultural journeys, and secure hospitality partnerships.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
 
-/* ============================= */
-/* GLOBAL STYLES */
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+body{
+font-family:'Poppins',sans-serif;
+background:#f5f5f5;
+color:#222;
+padding-top:110px;
 }
 
-body {
-font-family: 'Inter', sans-serif;
-background: #111;
-color: #fff;
-line-height: 1.6;
+/* HEADER */
+.luxury-header{
+position:fixed;
+top:0;
+width:100%;
+z-index:2000;
+background:rgba(0,0,0,0.55);
+backdrop-filter:blur(12px);
+transition:all 0.4s ease;
 }
 
-/* ============================= */
-/* NAVIGATION */
-nav {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 20px 60px;
-background: rgba(0,0,0,0.85);
-position: sticky;
-top: 0;
-z-index: 999;
+.luxury-header .container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 5%;
 }
 
-nav h2 {
-font-family: 'Playfair Display', serif;
-color: #d4af37;
-font-size: 24px;
+.luxury-header img{height:95px;}
+
+.nav-menu{display:flex;gap:20px;}
+
+.nav-menu a{
+color:#d4af37;
+text-decoration:none;
+font-size:14px;
+transition:0.3s ease;
 }
 
-nav ul {
-display: flex;
-gap: 30px;
-list-style: none;
+.nav-menu a:hover{color:#f1d47a;}
+
+.cta-button{
+background:#d4af37;
+color:black!important;
+padding:10px 22px;
+border-radius:2px;
+font-weight:600;
 }
 
-nav ul li a {
-text-decoration: none;
-color: white;
-font-weight: 400;
-transition: 0.3s ease;
+/* HERO */
+.wrapper{
+max-width:1200px;
+margin:40px auto;
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+min-height:80vh;
+background:#fff;
 }
 
-nav ul li a:hover {
-color: #d4af37;
+.left,.center,.right{padding:60px 40px;}
+
+.right img{
+width:100%;
+border-radius:8px;
+margin:20px 0;
+max-height:500px;
+object-fit:cover;
 }
 
-/* ============================= */
-/* HERO SECTION */
-.wrapper {
-max-width: 1200px;
-margin: 60px auto;
-display: grid;
-grid-template-columns: 1fr 1fr;
-min-height: 85vh;
-position: relative;
-background: url("images/hero.jpg") center center / cover no-repeat;
-border-radius: 14px;
-overflow: hidden;
-padding: 60px;
+/* BO-KAAP SECTION */
+.cape-culture{
+background:url("images/bokap.jpg") center center/cover no-repeat;
+min-height:70vh;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+margin:80px auto;
+max-width:1200px;
+border-radius:12px;
+overflow:hidden;
 }
 
-.wrapper::before {
-content: "";
-position: absolute;
-inset: 0;
-background: linear-gradient(
-to right,
-rgba(0,0,0,0.8),
-rgba(0,0,0,0.5)
-);
-z-index: 1;
+.culture-overlay{
+background:rgba(0,0,0,0.65);
+padding:60px 40px;
+text-align:center;
+color:white;
+width:100%;
 }
 
-.hero-content {
-position: relative;
-z-index: 2;
-max-width: 600px;
+.culture-overlay h2{
+font-size:34px;
+margin-bottom:20px;
+color:#d4af37;
 }
 
-.hero-content h1 {
-font-family: 'Playfair Display', serif;
-font-size: 48px;
-margin-bottom: 20px;
+.culture-overlay p{
+max-width:700px;
+margin:auto;
+line-height:1.8;
 }
 
-.hero-content p {
-font-size: 18px;
-margin-bottom: 30px;
-color: #eee;
+/* EXPERIENCES */
+.section{
+max-width:1200px;
+margin:80px auto;
+padding:0 40px;
 }
 
-.cta a {
-display: inline-block;
-padding: 12px 30px;
-border: 2px solid #d4af37;
-color: #d4af37;
-text-decoration: none;
-transition: 0.3s ease;
+.section h2{text-align:center;margin-bottom:20px;}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 }
 
-.cta a:hover {
-background: #d4af37;
-color: black;
+.card{
+background:#fff;
+padding:25px;
+border-radius:8px;
+transition:0.3s ease;
 }
 
-/* ============================= */
-/* CULTURE SECTION */
-.culture-section {
-background: url("images/bokap.jpg") center center / cover no-repeat;
-min-height: 70vh;
-display: flex;
-align-items: center;
-justify-content: center;
-position: relative;
-margin-top: 100px;
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 25px rgba(0,0,0,0.1);
 }
 
-.culture-section::before {
-content: "";
-position: absolute;
-inset: 0;
-background: rgba(0,0,0,0.65);
+/* SIGNATURE */
+.signature-premium{
+background:#111;
+color:#f1d47a;
+padding:60px 40px;
+border-radius:12px;
+margin:80px auto;
+max-width:1200px;
 }
 
-.culture-content {
-position: relative;
-z-index: 2;
-text-align: center;
-max-width: 800px;
-padding: 40px;
+.signature-premium h2{
+text-align:center;
+color:#d4af37;
+margin-bottom:20px;
 }
 
-.culture-content h2 {
-font-family: 'Playfair Display', serif;
-font-size: 42px;
-margin-bottom: 20px;
-color: #d4af37;
+.signature-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
 }
 
-.culture-content p {
-font-size: 18px;
-color: #f5f5f5;
+.signature-premium .card{
+background:#1a1a1a;
+border:2px solid #d4af37;
+color:#f1d47a;
+text-align:center;
 }
 
-/* ============================= */
+.security-logo{
+width:100px;
+margin-top:15px;
+}
+
+/* FORM */
+form{max-width:600px;margin:auto;}
+
+form input,form textarea{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:4px;
+}
+
+form button{
+width:100%;
+padding:14px;
+background:#222;
+color:#fff;
+border:none;
+cursor:pointer;
+}
+
 /* FOOTER */
-footer {
-text-align: center;
-padding: 30px;
-margin-top: 80px;
-background: #000;
-color: #aaa;
-font-size: 14px;
+footer{
+text-align:center;
+padding:30px;
+background:#fff;
+margin-top:60px;
 }
 
-/* ============================= */
 /* RESPONSIVE */
-@media (max-width: 768px) {
-
-nav {
-padding: 20px;
+@media(max-width:992px){
+.wrapper{grid-template-columns:1fr 1fr;}
 }
-
-.wrapper {
-grid-template-columns: 1fr;
-padding: 40px 30px;
+@media(max-width:768px){
+.wrapper{grid-template-columns:1fr;}
+.left,.center,.right{text-align:center;}
 }
-
-.hero-content h1 {
-font-size: 34px;
-}
-
-}
-
 </style>
 </head>
 <body>
 
-<nav>
-<h2>Travelling The Mother City</h2>
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">Experiences</a></li>
-<li><a href="#">Luxury</a></li>
-<li><a href="#">Contact</a></li>
-</ul>
+<header class="luxury-header">
+<div class="container">
+<a href="#"><img src="logo.png" alt="Travelling the Mother City Logo"></a>
+<nav class="nav-menu">
+<a href="#experiences">Experiences</a>
+<a href="#signature">Security</a>
+<a href="#contact" class="cta-button">Enquire</a>
 </nav>
+</div>
+</header>
 
-<section class="wrapper">
-<div class="hero-content">
-<h1>Discover Cape Town in Luxury</h1>
-<p>From world-class coastlines to vibrant cultural streets, we curate unforgettable premium travel experiences across the Mother City.</p>
-<div class="cta">
-<a href="#">Explore Experiences</a>
+<div class="wrapper">
+<div class="left">
+<h2>About Us</h2>
+<p>Travelling the Mother City is a Cape Town luxury travel specialist built on deep local knowledge. We design private, curated experiences combining accommodation, culture, and security.</p>
+</div>
+
+<div class="center">
+<p>VIP Contact</p>
+<p>info@mothercity.co.za</p>
+</div>
+
+<div class="right">
+<h1>Travelling the Mother City</h1>
+<img src="images/hero.jpg" alt="Cape Town Luxury Coastline">
+<p>Luxury · Culture · Local Expertise</p>
+</div>
+</div>
+
+<section class="cape-culture">
+<div class="culture-overlay">
+<h2>The Colours of the Mother City</h2>
+<p>From the vibrant streets of Bo-Kaap to the Atlantic coastline, we create meaningful cultural journeys rooted in authenticity and delivered in luxury.</p>
+</div>
+</section>
+
+<section id="experiences" class="section">
+<h2>Signature Experiences</h2>
+<div class="grid">
+<div class="card"><h4>Luxury Accommodation</h4><p>Handpicked villas and boutique hotels.</p></div>
+<div class="card"><h4>Private Driver & Chauffeur</h4><p>Dedicated safe private transport.</p></div>
+<div class="card"><h4>Signature Cultural Experience</h4><p>Authentic guided cultural journeys.</p></div>
+<div class="card"><h4>Wine Estates</h4><p>Private tastings across Stellenbosch and Franschhoek.</p></div>
+<div class="card"><h4>Ocean Experiences</h4><p>Yacht cruises and sunset tours.</p></div>
+<div class="card"><h4>Bucket-list Activities</h4><p>Paragliding, shark diving, and more.</p></div>
+</div>
+</section>
+
+<section id="signature" class="signature-premium">
+<h2>Signature Experience & Security Specialist</h2>
+<div class="signature-grid">
+<div class="card">
+<h4>Security Specialist</h4>
+<p>In collaboration with Hawk Associates providing discreet professional protection.</p>
+<img src="hawk-logo.png" class="security-logo">
+</div>
+<div class="card">
+<h4>Exclusive Signature Experience</h4>
+<p>Private curated journeys tailored to your preferences.</p>
 </div>
 </div>
 </section>
 
-<section class="culture-section">
-<div class="culture-content">
-<h2>Experience The Culture</h2>
-<p>From the vibrant streets of Bo-Kaap to the luxury coastlines of Clifton and Camps Bay, we craft authentic yet refined Cape Town journeys tailored for global travelers seeking something extraordinary.</p>
-</div>
+<section id="contact" class="section">
+<h2>Book Your Experience</h2>
+<form action="https://formspree.io/f/mwvnvlqg" method="POST">
+<input type="text" name="name" placeholder="Full Name" required>
+<input type="email" name="email" placeholder="Email Address" required>
+<textarea name="message" rows="5" placeholder="Tell us about your plans"></textarea>
+<button type="submit">Submit Request</button>
+</form>
 </section>
 
 <footer>
-© 2026 Travelling The Mother City. All Rights Reserved.
+© 2025 Travelling the Mother City
 </footer>
 
 </body>

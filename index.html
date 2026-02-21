@@ -5,10 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Travelling the Mother City | Cape Town Luxury Travel & Secure Hospitality Specialists</title>
-<meta name="description" content="At Travelling the Mother City we are specialist in Cape Town offering luxury accommodation, private drivers, cultural experiences, and bespoke journeys curated in partnership with trusted local communities. Your experience matters to us and our saftey is our top priority, Welcome to the mothercity in the motherland.">
+<meta name="description" content="At Travelling the Mother City we are specialists in Cape Town offering luxury accommodation, private drivers, cultural experiences, and bespoke journeys curated in partnership with trusted local communities. Your experience matters to us and our safety is our top priority. Welcome to the Mother City in the Motherland.">
 
+<!-- FONT PRELOAD -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -31,18 +33,15 @@ background: #d4af37;
 border-radius: 2px;
 }
 
-/* MOBILE ONLY */
 @media(max-width: 768px) {
-.hamburger {
-display: flex;
-}
+.hamburger { display: flex; }
 
 .nav-menu {
 max-height: 0;
 overflow: hidden;
 flex-direction: column;
 width: 100%;
-background: rgba(0,0,0,0.9);
+background: rgba(0,0,0,0.95);
 padding: 0;
 margin-top: 10px;
 border-radius: 4px;
@@ -58,10 +57,6 @@ padding: 15px 0;
 text-align: center;
 padding: 10px 0;
 font-size: 16px;
-}
-
-.luxury-header .container {
-flex-wrap: wrap;
 }
 }
 
@@ -103,9 +98,7 @@ max-width: 100%;
 transition: transform 0.3s ease;
 }
 
-.luxury-header img:hover {
-transform: scale(1.05);
-}
+.luxury-header img:hover { transform: scale(1.05); }
 
 .luxury-header .nav-menu {
 display: flex;
@@ -123,9 +116,7 @@ white-space: nowrap;
 transition: all 0.3s ease;
 }
 
-.luxury-header .nav-menu a:hover {
-color: #f1d47a;
-}
+.luxury-header .nav-menu a:hover { color: #f1d47a; }
 
 .cta-button {
 background: #d4af37;
@@ -156,12 +147,7 @@ min-height: 80vh;
 
 .left h2 { font-size: 30px; }
 
-.left .line {
-width: 60px;
-height: 3px;
-background: #222;
-margin: 15px 0 25px;
-}
+.left .line { width: 60px; height: 3px; background: #222; margin: 15px 0 25px; }
 
 .left p { font-size: 14px; line-height: 1.8; max-width: 340px; }
 
@@ -196,12 +182,8 @@ font-weight: 600;
 
 .right img { width: 100%; border-radius: 8px; margin: 20px 0; }
 
-.right .cta a {
-text-decoration: none;
-font-weight: 600;
-border-bottom: 2px solid #222;
-padding-bottom: 4px;
-}
+/* Responsive hero image with srcset */
+.right img { width: 100%; max-height: 500px; object-fit: cover; }
 
 /* ============================= */
 /* SECTIONS */
@@ -235,7 +217,10 @@ gap: 30px;
 background: #fff;
 padding: 25px;
 border-radius: 8px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.card:hover { transform: translateY(-6px); box-shadow: 0 12px 25px rgba(0,0,0,0.1); }
 
 .card h4 { margin-bottom: 10px; font-weight: 600; }
 
@@ -284,7 +269,6 @@ opacity: 1;
 transform: translateY(0);
 }
 
-/* ============================= */
 /* SIGNATURE EXPERIENCE & SECURITY PREMIUM */
 .signature-premium {
 background: #111;
@@ -303,12 +287,7 @@ color: #d4af37;
 margin-bottom: 15px;
 }
 
-.signature-premium .line-gold {
-width: 60px;
-height: 3px;
-background: #d4af37;
-margin: 0 auto 25px;
-}
+.signature-premium .line-gold { width: 60px; height: 3px; background: #d4af37; margin: 0 auto 25px; }
 
 .signature-premium .intro {
 text-align: center;
@@ -359,6 +338,18 @@ display: block;
 margin-left: auto;
 margin-right: auto;
 }
+
+/* ============================= */
+/* RESPONSIVE WRAPPER */
+@media(max-width: 992px){
+.wrapper { grid-template-columns: 1fr 1fr; }
+}
+@media(max-width: 768px){
+.wrapper { grid-template-columns: 1fr; }
+.left, .center, .right { text-align: center; padding: 30px 20px; }
+.right h1 { font-size: 36px; }
+.left h2 { font-size: 26px; }
+}
 </style>
 </head>
 <body>
@@ -370,7 +361,7 @@ margin-right: auto;
 <img src="logo.png" alt="Travelling the Mother City Logo">
 </a>
 
-<div class="hamburger">
+<div class="hamburger" aria-label="Toggle navigation menu">
 <span></span>
 <span></span>
 <span></span>
@@ -379,7 +370,7 @@ margin-right: auto;
 <nav class="nav-menu">
 <a href="#experiences">Experiences</a>
 <a href="#about">About</a>
-<a href="#signature">Security</a>
+<a href="#hawk-security">Security</a>
 <a href="#contact" class="cta-button">Enquire Now</a>
 </nav>
 </div>
@@ -387,7 +378,6 @@ margin-right: auto;
 
 <!-- WRAPPER -->
 <div class="wrapper">
-<!-- LEFT ABOUT -->
 <div class="left fade-up" id="about">
 <h2>About Us</h2>
 <div class="line"></div>
@@ -395,11 +385,10 @@ margin-right: auto;
 Travelling the Mother City is a Cape Town luxury travel specialist built on deep local knowledge.
 We design private, curated experiences that combine luxury accommodation, cultural immersion,
 private drivers, and iconic destinations — delivered with comfort, safety, and authenticity. Cape Town is
-an unique location with amazing scenery.
+a unique location with amazing scenery.
 </p>
 </div>
 
-<!-- CENTER CONTACT -->
 <div class="center fade-up">
 <h3>VIP CONTACT</h3>
 <hr>
@@ -409,10 +398,16 @@ WhatsApp Us
 </a>
 </div>
 
-<!-- RIGHT HERO IMAGE -->
 <div class="right fade-up">
 <h1>Travelling<br>the<br>Mother City</h1>
-<img loading="lazy" src="https://static.vecteezy.com/system/resources/previews/028/159/350/large_2x/sunset-over-table-mountain-and-downtown-cape-town-south-africa-aerial-panoramic-view-of-cape-town-cityscape-at-sunset-ai-generated-free-photo.jpg" alt="Luxury Cape Town cityscape with Table Mountain at sunset">
+<img
+loading="lazy"
+decoding="async"
+src="https://i.ibb.co/9W6yX7b/cape-town-hero.jpg"
+srcset="https://i.ibb.co/9W6yX7b/cape-town-hero.jpg 1200w,
+https://i.ibb.co/8xqSh1G/cape-town-hero-768.jpg 768w,
+https://i.ibb.co/fHbQnZ7/cape-town-hero-480.jpg 480w"
+alt="Luxury Cape Town cityscape with Table Mountain at sunset">
 <div class="cta">
 <p>Luxury · Culture · Local Expertise</p>
 <a href="#contact">Design My Private Experience</a>
@@ -445,7 +440,7 @@ Travelling the Mother City goes beyond luxury. We partner with
 <a href="https://hawkassociates.co.za" target="_blank" style="color:#d4af37; font-weight:bold; text-decoration:underline;">Hawk Associates</a>, providing expert security services so every journey is safe, private, and unforgettable.
 </p>
 <div class="grid signature-grid">
-<div class="card">
+<div class="card" id="hawk-security">
 <h4>Security Specialist</h4>
 <p>
 In collaboration with
@@ -459,14 +454,6 @@ In collaboration with
 </div>
 </div>
 </div>
-</section>
-
-<!-- SECURITY SECTION -->
-<section id="security" class="section fade-up">
-<h2>Security & Safety</h2>
-<p class="intro">
-Travelling the Mother City prioritizes your safety. Our private drivers, vetted partners, and trusted local guides ensure you enjoy your luxury Cape Town experience with complete peace of mind.
-</p>
 </section>
 
 <!-- CONTACT FORM -->
@@ -497,23 +484,24 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 if (hamburger) {
-hamburger.addEventListener('click', () => {
-navMenu.classList.toggle('active');
-});
+hamburger.addEventListener('click', () => { navMenu.classList.toggle('active'); });
 }
 
 // Collapse mobile menu after clicking a link
 document.querySelectorAll('.nav-menu a').forEach(link => {
-link.addEventListener('click', () => {
-if (navMenu.classList.contains('active')) {
-navMenu.classList.remove('active');
-}
+link.addEventListener('click', () => { if (navMenu.classList.contains('active')) { navMenu.classList.remove('active'); } });
 });
+
+// Header scroll effect
+window.addEventListener('scroll', () => {
+const header = document.querySelector('.luxury-header');
+header.style.background = window.scrollY > 100 ? 'rgba(0,0,0,0.85)' : 'rgba(0,0,0,0.55)';
 });
 </script>
 
 </body>
 </html>
+
 
 
 

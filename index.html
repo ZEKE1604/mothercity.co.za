@@ -3,507 +3,225 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travelling The Mother City</title>
 
-<title>Travelling the Mother City | Cape Town Luxury Travel & Secure Hospitality Specialists</title>
-<meta name="description" content="At Travelling the Mother City we are specialists in Cape Town offering luxury accommodation, private drivers, cultural experiences, and bespoke journeys curated in partnership with trusted local communities. Your experience matters to us and our safety is our top priority. Welcome to the Mother City in the Motherland.">
-
-<!-- FONT PRELOAD -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
 
 /* ============================= */
-/* HAMBURGER NAVIGATION */
-.hamburger {
-display: none;
-flex-direction: column;
-cursor: pointer;
-gap: 5px;
-}
-
-.hamburger span {
-width: 25px;
-height: 3px;
-background: #d4af37;
-border-radius: 2px;
-}
-
-@media(max-width: 768px) {
-.hamburger { display: flex; }
-
-.nav-menu {
-max-height: 0;
-overflow: hidden;
-flex-direction: column;
-width: 100%;
-background: rgba(0,0,0,0.95);
+/* GLOBAL STYLES */
+* {
+margin: 0;
 padding: 0;
-margin-top: 10px;
-border-radius: 4px;
-transition: max-height 0.4s ease, padding 0.4s ease;
+box-sizing: border-box;
 }
 
-.nav-menu.active {
-max-height: 500px;
-padding: 15px 0;
-}
-
-.nav-menu a {
-text-align: center;
-padding: 10px 0;
-font-size: 16px;
-}
-}
-
-/* ============================= */
-/* BODY & FONT */
 body {
-font-family: 'Poppins', sans-serif;
-background: #f5f5f5;
-color: #222;
-padding-top: 110px;
+font-family: 'Inter', sans-serif;
+background: #111;
+color: #fff;
+line-height: 1.6;
 }
 
 /* ============================= */
-/* LUXURY HEADER */
-.luxury-header {
-position: fixed;
-top: 0;
-width: 100%;
-z-index: 2000;
-background: rgba(0, 0, 0, 0.55);
-backdrop-filter: blur(12px);
--webkit-backdrop-filter: blur(12px);
-transition: all 0.4s ease;
-}
-
-.luxury-header .container {
+/* NAVIGATION */
+nav {
 display: flex;
 justify-content: space-between;
 align-items: center;
-flex-wrap: wrap;
-padding: 10px 5%;
-gap: 15px;
+padding: 20px 60px;
+background: rgba(0,0,0,0.85);
+position: sticky;
+top: 0;
+z-index: 999;
 }
 
-.luxury-header img {
-height: 100px;
-width: auto;
-max-width: 100%;
-transition: transform 0.3s ease;
-}
-
-.luxury-header img:hover { transform: scale(1.05); }
-
-.luxury-header .nav-menu {
-display: flex;
-flex-wrap: wrap;
-align-items: center;
-gap: 20px;
-}
-
-.luxury-header .nav-menu a {
+nav h2 {
+font-family: 'Playfair Display', serif;
 color: #d4af37;
-font-weight: 500;
+font-size: 24px;
+}
+
+nav ul {
+display: flex;
+gap: 30px;
+list-style: none;
+}
+
+nav ul li a {
 text-decoration: none;
-font-size: 14px;
-white-space: nowrap;
-transition: all 0.3s ease;
+color: white;
+font-weight: 400;
+transition: 0.3s ease;
 }
 
-.luxury-header .nav-menu a:hover { color: #f1d47a; }
-
-.cta-button {
-background: #d4af37;
-color: black !important;
-padding: 10px 22px;
-border-radius: 2px;
-font-weight: 600;
-transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-background: #f1d47a;
-transform: translateY(-2px);
+nav ul li a:hover {
+color: #d4af37;
 }
 
 /* ============================= */
-/* HERO & WRAPPER */
+/* HERO SECTION */
 .wrapper {
 max-width: 1200px;
-margin: 40px auto;
-background: #fff;
+margin: 60px auto;
 display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-min-height: 80vh;
+grid-template-columns: 1fr 1fr;
+min-height: 85vh;
+position: relative;
+background: url("images/hero.jpg") center center / cover no-repeat;
+border-radius: 14px;
+overflow: hidden;
+padding: 60px;
 }
 
-.left { padding: 60px 40px; }
-
-.left h2 { font-size: 30px; }
-
-.left .line { width: 60px; height: 3px; background: #222; margin: 15px 0 25px; }
-
-.left p { font-size: 14px; line-height: 1.8; max-width: 340px; }
-
-.center {
-background: #e8c7cc;
-padding: 60px 40px;
-text-align: center;
-display: flex;
-flex-direction: column;
-justify-content: center;
+.wrapper::before {
+content: "";
+position: absolute;
+inset: 0;
+background: linear-gradient(
+to right,
+rgba(0,0,0,0.8),
+rgba(0,0,0,0.5)
+);
+z-index: 1;
 }
 
-.center h3 { font-size: 18px; letter-spacing: 2px; }
-
-.center hr { width: 60px; margin: 15px auto; border: 1px solid #222; }
-
-.center p { margin: 8px 0; font-size: 14px; }
-
-.whatsapp {
-margin-top: 20px;
-padding: 12px;
-background: #25D366;
-color: #fff;
-text-decoration: none;
-border-radius: 4px;
-font-weight: 600;
+.hero-content {
+position: relative;
+z-index: 2;
+max-width: 600px;
 }
 
-.right { padding: 40px; text-align: right; }
-
-.right h1 { font-size: 44px; line-height: 1.1; }
-
-.right img { width: 100%; border-radius: 8px; margin: 20px 0; }
-
-/* Responsive hero image with srcset */
-.right img { width: 100%; max-height: 500px; object-fit: cover; }
-
-/* ============================= */
-/* SECTIONS */
-.section {
-max-width: 1200px;
-margin: 80px auto;
-padding: 0 40px;
-}
-
-.section h2 {
-text-align: center;
-font-size: 32px;
+.hero-content h1 {
+font-family: 'Playfair Display', serif;
+font-size: 48px;
 margin-bottom: 20px;
 }
 
-.section .intro {
+.hero-content p {
+font-size: 18px;
+margin-bottom: 30px;
+color: #eee;
+}
+
+.cta a {
+display: inline-block;
+padding: 12px 30px;
+border: 2px solid #d4af37;
+color: #d4af37;
+text-decoration: none;
+transition: 0.3s ease;
+}
+
+.cta a:hover {
+background: #d4af37;
+color: black;
+}
+
+/* ============================= */
+/* CULTURE SECTION */
+.culture-section {
+background: url("images/bokap.jpg") center center / cover no-repeat;
+min-height: 70vh;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+margin-top: 100px;
+}
+
+.culture-section::before {
+content: "";
+position: absolute;
+inset: 0;
+background: rgba(0,0,0,0.65);
+}
+
+.culture-content {
+position: relative;
+z-index: 2;
 text-align: center;
-max-width: 720px;
-margin: 0 auto 40px;
-font-size: 15px;
-color: #555;
+max-width: 800px;
+padding: 40px;
 }
 
-.grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 30px;
+.culture-content h2 {
+font-family: 'Playfair Display', serif;
+font-size: 42px;
+margin-bottom: 20px;
+color: #d4af37;
 }
 
-.card {
-background: #fff;
-padding: 25px;
-border-radius: 8px;
-transition: transform 0.3s ease, box-shadow 0.3s ease;
+.culture-content p {
+font-size: 18px;
+color: #f5f5f5;
 }
 
-.card:hover { transform: translateY(-6px); box-shadow: 0 12px 25px rgba(0,0,0,0.1); }
-
-.card h4 { margin-bottom: 10px; font-weight: 600; }
-
-/* FORM */
-form {
-max-width: 600px;
-margin: auto;
-}
-
-form input, form textarea {
-width: 100%;
-padding: 12px;
-margin-bottom: 15px;
-border: 1px solid #ccc;
-border-radius: 4px;
-}
-
-form button {
-width: 100%;
-padding: 14px;
-background: #222;
-color: #fff;
-border: none;
-font-size: 16px;
-cursor: pointer;
-}
-
+/* ============================= */
 /* FOOTER */
 footer {
 text-align: center;
 padding: 30px;
-background: #fff;
-margin-top: 60px;
+margin-top: 80px;
+background: #000;
+color: #aaa;
 font-size: 14px;
-}
-
-/* ANIMATIONS */
-.fade-up {
-opacity: 0;
-transform: translateY(30px);
-transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-up.visible {
-opacity: 1;
-transform: translateY(0);
-}
-
-/* SIGNATURE EXPERIENCE & SECURITY PREMIUM */
-.signature-premium {
-background: #111;
-color: #f1d47a;
-padding: 60px 40px;
-border-radius: 12px;
-box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-margin: 80px auto;
-max-width: 1200px;
-}
-
-.signature-premium h2 {
-text-align: center;
-font-size: 34px;
-color: #d4af37;
-margin-bottom: 15px;
-}
-
-.signature-premium .line-gold { width: 60px; height: 3px; background: #d4af37; margin: 0 auto 25px; }
-
-.signature-premium .intro {
-text-align: center;
-font-size: 16px;
-color: #f1d47a;
-max-width: 720px;
-margin: 0 auto 40px;
-font-weight: 500;
-}
-
-.signature-premium .signature-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 30px;
-}
-
-.signature-premium .card {
-background: #1a1a1a;
-border: 2px solid #d4af37;
-padding: 25px;
-border-radius: 10px;
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-text-align: center;
-}
-
-.signature-premium .card:hover {
-transform: translateY(-6px);
-box-shadow: 0 12px 25px rgba(212,175,55,0.4);
-}
-
-.signature-premium .card h4 {
-margin-bottom: 12px;
-color: #d4af37;
-font-weight: 600;
-font-size: 20px;
-}
-
-.signature-premium .card p {
-color: #f1d47a;
-font-size: 14px;
-line-height: 1.7;
-}
-
-.signature-premium .security-logo {
-width: 100px;
-margin-top: 15px;
-display: block;
-margin-left: auto;
-margin-right: auto;
 }
 
 /* ============================= */
-/* RESPONSIVE WRAPPER */
-@media(max-width: 992px){
-.wrapper { grid-template-columns: 1fr 1fr; }
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+nav {
+padding: 20px;
 }
-@media(max-width: 768px){
-.wrapper { grid-template-columns: 1fr; }
-.left, .center, .right { text-align: center; padding: 30px 20px; }
-.right h1 { font-size: 36px; }
-.left h2 { font-size: 26px; }
+
+.wrapper {
+grid-template-columns: 1fr;
+padding: 40px 30px;
 }
+
+.hero-content h1 {
+font-size: 34px;
+}
+
+}
+
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
-<header class="luxury-header">
-<div class="container">
-<a href="index.html">
-<img src="logo.png" alt="Travelling the Mother City Logo">
-</a>
-
-<div class="hamburger" aria-label="Toggle navigation menu">
-<span></span>
-<span></span>
-<span></span>
-</div>
-
-<nav class="nav-menu">
-<a href="#experiences">Experiences</a>
-<a href="#about">About</a>
-<a href="#hawk-security">Security</a>
-<a href="#contact" class="cta-button">Enquire Now</a>
+<nav>
+<h2>Travelling The Mother City</h2>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Experiences</a></li>
+<li><a href="#">Luxury</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
 </nav>
-</div>
-</header>
 
-<!-- WRAPPER -->
-<div class="wrapper">
-<div class="left fade-up" id="about">
-<h2>About Us</h2>
-<div class="line"></div>
-<p>
-Travelling the Mother City is a Cape Town luxury travel specialist built on deep local knowledge.
-We design private, curated experiences that combine luxury accommodation, cultural immersion,
-private drivers, and iconic destinations — delivered with comfort, safety, and authenticity. Cape Town is
-a unique location with amazing scenery.
-</p>
-</div>
-
-<div class="center fade-up">
-<h3>VIP CONTACT</h3>
-<hr>
-<p>info@mothercity.co.za</p>
-<a class="whatsapp" href="https://wa.me/27834491612?text=Hello%20Travelling%20the%20Mother%20City%2C%20I%20would%20like%20to%20design%20a%20private%20Cape%20Town%20experience." target="_blank">
-WhatsApp Us
-</a>
-</div>
-
-<div class="right fade-up">
-<h1>Travelling<br>the<br>Mother City</h1>
-<img
-loading="lazy"
-decoding="async"
-src="https://i.ibb.co/9W6yX7b/cape-town-hero.jpg"
-srcset="https://i.ibb.co/9W6yX7b/cape-town-hero.jpg 1200w,
-https://i.ibb.co/8xqSh1G/cape-town-hero-768.jpg 768w,
-https://i.ibb.co/fHbQnZ7/cape-town-hero-480.jpg 480w"
-alt="Luxury Cape Town cityscape with Table Mountain at sunset">
+<section class="wrapper">
+<div class="hero-content">
+<h1>Discover Cape Town in Luxury</h1>
+<p>From world-class coastlines to vibrant cultural streets, we curate unforgettable premium travel experiences across the Mother City.</p>
 <div class="cta">
-<p>Luxury · Culture · Local Expertise</p>
-<a href="#contact">Design My Private Experience</a>
-</div>
-</div>
-</div>
-
-<!-- EXPERIENCES -->
-<section id="experiences" class="section fade-up">
-<h2>Signature Experiences</h2>
-<p class="intro">Our experiences are private or small-group only and curated in partnership with trusted local communities — offering a respectful, meaningful way of travelling the Mother City.</p>
-<div class="grid">
-<div class="card"><h4>Luxury Accommodation</h4><p>Handpicked villas, boutique hotels, and premium apartments through trusted local partners, selected for comfort, privacy, and prime locations.</p></div>
-<div class="card"><h4>Private Driver & Chauffeur</h4><p>A dedicated private driver providing seamless, safe, and comfortable travel throughout Cape Town, allowing you to explore at your own pace.</p></div>
-<div class="card"><h4>Signature Cultural Experience</h4><p>A private or small-group cultural journey into Cape Town’s communities, designed in partnership with trusted local residents and community guides. Guests enjoy authentic storytelling, history, music, and a locally hosted food experience.</p><p>This signature experience includes a private driver, ensuring comfort, safety, and meaningful cultural exchange throughout the journey.</p></div>
-<div class="card"><h4>Wine Estates</h4><p>Private tastings across Stellenbosch, Franschhoek, Groot Constantia and plenty more with carefully selected local partners.</p></div>
-<div class="card"><h4>Ocean Experiences</h4><p>Yacht cruises, seal encounters, and sunset champagne tours along the Atlantic coastline.</p></div>
-<div class="card"><h4>Curated Beaches</h4><p>Relaxed days at Clifton, Camps Bay, and Llandudno, selected for scenery, privacy, and atmosphere free.</p></div>
-<div class="card"><h4>Bucket-list Activities</h4><p>Elevate your journey with unforgettable experiences such as paragliding, shark cage diving, sky diving and quad biking on the dunes.</p><p>Let us know how you'd like to customise your adventure - we'll design it around you</p></div>
-</div>
-</section>
-
-<!-- SIGNATURE EXPERIENCE & SECURITY PREMIUM -->
-<section id="signature" class="section signature-premium fade-up">
-<div class="container">
-<h2>Signature Experience & Security Specialist</h2>
-<div class="line-gold"></div>
-<p class="intro">
-Travelling the Mother City goes beyond luxury. We partner with
-<a href="https://hawkassociates.co.za" target="_blank" style="color:#d4af37; font-weight:bold; text-decoration:underline;">Hawk Associates</a>, providing expert security services so every journey is safe, private, and unforgettable.
-</p>
-<div class="grid signature-grid">
-<div class="card" id="hawk-security">
-<h4>Security Specialist</h4>
-<p>
-In collaboration with
-<a href="https://hawkassociates.co.za" target="_blank" style="color:#d4af37; font-weight:bold; text-decoration:underline;">Hawk Associates</a>, our security experts ensure discreet, professional protection during your stay. Every itinerary is vetted for safety, privacy, and peace of mind.
-</p>
-<img src="hawk-logo.png" alt="Hawk Associates Logo" class="security-logo">
-</div>
-<div class="card">
-<h4>Exclusive Signature Experience</h4>
-<p>Unique private experiences designed by our local experts — from hidden cultural gems to exclusive wine estates. Every journey is tailored to your preferences, ensuring an unforgettable Cape Town adventure.</p>
-</div>
+<a href="#">Explore Experiences</a>
 </div>
 </div>
 </section>
 
-<!-- CONTACT FORM -->
-<section id="contact" class="section fade-up">
-<h2>Book Your Experience</h2>
-<form action="https://formspree.io/f/mwvnvlqg" method="POST">
-<input type="text" name="name" placeholder="Full Name" required>
-<input type="email" name="email" placeholder="Email Address" required>
-<textarea name="message" rows="5" placeholder="Tell us about your Cape Town plans"></textarea>
-<button type="submit">Submit Request</button>
-<p style="font-size:12px; text-align:center; color:#666;">We respond personally within 24 hours.</p>
-</form>
+<section class="culture-section">
+<div class="culture-content">
+<h2>Experience The Culture</h2>
+<p>From the vibrant streets of Bo-Kaap to the luxury coastlines of Clifton and Camps Bay, we craft authentic yet refined Cape Town journeys tailored for global travelers seeking something extraordinary.</p>
+</div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-© 2025 Travelling the Mother City · Cape Town Luxury Travel Specialists
+© 2026 Travelling The Mother City. All Rights Reserved.
 </footer>
-
-<script>
-// Fade-up animations
-const observer = new IntersectionObserver(entries => {
-entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); } });
-}, { threshold: 0.15 });
-document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-// Hamburger menu toggle
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-if (hamburger) {
-hamburger.addEventListener('click', () => { navMenu.classList.toggle('active'); });
-}
-
-// Collapse mobile menu after clicking a link
-document.querySelectorAll('.nav-menu a').forEach(link => {
-link.addEventListener('click', () => { if (navMenu.classList.contains('active')) { navMenu.classList.remove('active'); } });
-});
-
-// Header scroll effect
-window.addEventListener('scroll', () => {
-const header = document.querySelector('.luxury-header');
-header.style.background = window.scrollY > 100 ? 'rgba(0,0,0,0.85)' : 'rgba(0,0,0,0.55)';
-});
-</script>
 
 </body>
 </html>
-
-
-
-
-
-

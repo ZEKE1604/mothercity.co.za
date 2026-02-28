@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <title>Travelling the Mother City | Cape Town Luxury Travel & Secure Hospitality Specialists</title>
-<meta name="description" content="At Travelling the Mother City we are specialists in Cape Town offering luxury accommodation, private drivers, cultural experiences, and bespoke journeys curated in partnership with trusted local communities. Your experience matters to us and your safety is our top priority. Welcome to the Mother City.">
+<meta name="description" content="Luxury Cape Town travel with private drivers, curated cultural experiences, premium accommodation and executive-level security partnerships.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,329 +14,101 @@
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
+body { font-family: 'Poppins', sans-serif; background: #f5f5f5; color: #222; padding-top: 110px; overflow-x: hidden; }
 
-body {
-font-family: 'Poppins', sans-serif;
-background: #f5f5f5;
-color: #222;
-padding-top: 110px;
-overflow-x: hidden;
-}
-
-/* ============================= */
-/* HAMBURGER NAVIGATION */
-.hamburger {
-display: none;
-flex-direction: column;
-cursor: pointer;
-gap: 5px;
-}
-
-.hamburger span {
-width: 25px;
-height: 3px;
-background: #d4af37;
-border-radius: 2px;
-}
-
-/* ============================= */
-/* MOBILE NAVIGATION */
-@media(max-width: 768px) {
-.hamburger {
-display: flex;
-}
-
-.nav-menu {
-max-height: 0;
-overflow: hidden;
-flex-direction: column;
-width: 100%;
-background: rgba(0,0,0,0.95);
-padding: 0;
-margin-top: 10px;
-border-radius: 4px;
-transition: max-height 0.4s ease, padding 0.4s ease;
-}
-
-.nav-menu.active {
-max-height: 500px;
-padding: 15px 0;
-}
-
-.nav-menu a {
-text-align: center;
-padding: 12px 0;
-font-size: 16px;
-}
-
-.luxury-header .container {
-flex-wrap: wrap;
-}
-}
-
-/* ============================= */
-/* LUXURY HEADER */
+/* ================= HEADER ================= */
 .luxury-header {
-position: fixed;
-top: 0;
-width: 100%;
-z-index: 2000;
-background: rgba(0, 0, 0, 0.55);
-backdrop-filter: blur(12px);
--webkit-backdrop-filter: blur(12px);
-transition: all 0.4s ease;
+position: fixed; top: 0; width: 100%; z-index: 2000;
+background: rgba(0,0,0,0.55); backdrop-filter: blur(12px); transition: all 0.3s ease;
 }
+.luxury-header .container { display: flex; justify-content: space-between; align-items: center; padding: 10px 5%; gap:15px; }
+.luxury-header img { height: 100px; transition: transform 0.3s ease; }
+.luxury-header img:hover { transform: scale(1.05); }
+.nav-menu { display: flex; gap: 20px; align-items: center; }
+.nav-menu a { color:#d4af37; text-decoration:none; font-size:14px; font-weight:500; }
+.cta-button { background:#d4af37; color:black !important; padding:10px 22px; border-radius:2px; font-weight:600; }
+.cta-button:hover { background:#f1d47a; transform:translateY(-2px); }
 
-.luxury-header .container {
-display: flex;
-justify-content: space-between;
-align-items: center;
-flex-wrap: wrap;
-padding: 10px 5%;
-gap: 15px;
-}
+/* Hamburger */
+.hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; }
+.hamburger span { width:25px; height:3px; background:#d4af37; border-radius:2px; }
 
-.luxury-header img {
-height: 100px;
-width: auto;
-max-width: 100%;
-transition: transform 0.3s ease;
-}
+/* ================= HERO ================= */
+.wrapper { max-width:1200px; margin:40px auto; display:grid; grid-template-columns:1fr 1fr 1fr; min-height:80vh; background:#fff; }
+.left { padding:60px 40px; }
+.left h2 { font-size:30px; }
+.left .line { width:60px; height:3px; background:#222; margin:15px 0 25px; }
+.left p { font-size:14px; line-height:1.8; max-width:340px; }
+.center { background:#e8c7cc; padding:60px 40px; text-align:center; display:flex; flex-direction:column; justify-content:center; }
+.center h3 { font-size:18px; letter-spacing:2px; }
+.center hr { width:60px; margin:15px auto; border:1px solid #222; }
+.center p { margin:8px 0; font-size:14px; }
+.whatsapp { margin-top:20px; padding:12px; background:#25D366; color:#fff; text-decoration:none; border-radius:4px; font-weight:600; }
+.right { padding:40px; text-align:right; }
+.right h1 { font-size:44px; line-height:1.1; }
+.right img { width:100%; border-radius:8px; margin:20px 0; }
 
-.luxury-header img:hover {
-transform: scale(1.05);
-}
+/* ================= SECTIONS ================= */
+.section { max-width:1200px; margin:80px auto; padding:0 40px; }
+.section h2 { text-align:center; font-size:32px; margin-bottom:20px; }
+.section .intro { text-align:center; max-width:720px; margin:0 auto 40px; font-size:15px; color:#555; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:30px; }
+.card { background:#fff; padding:25px; border-radius:8px; }
+.card h4 { margin-bottom:10px; font-weight:600; }
 
-.luxury-header .nav-menu {
-display: flex;
-flex-wrap: wrap;
-align-items: center;
-gap: 20px;
-}
+/* FORM */
+form { max-width:700px; margin:auto; display:grid; gap:15px; }
+form input, form select, form textarea { width:100%; padding:12px; border:1px solid #ccc; border-radius:6px; font-size:14px; transition:0.3s; }
+form input:focus, form select:focus, form textarea:focus { outline:none; border-color:#d4af37; box-shadow:0 0 10px rgba(212,175,55,0.3); }
+form button { width:100%; padding:16px; background:#222; color:#fff; border:none; font-size:16px; cursor:pointer; border-radius:6px; transition:0.3s; }
+form button:hover { background:#d4af37; color:black; }
 
-.luxury-header .nav-menu a {
-color: #d4af37;
-font-weight: 500;
-text-decoration: none;
-font-size: 14px;
-white-space: nowrap;
-transition: all 0.3s ease;
-}
+/* FOOTER */
+footer { text-align:center; padding:30px; background:#fff; margin-top:60px; font-size:14px; }
 
-.luxury-header .nav-menu a:hover {
-color: #f1d47a;
-}
-
-.cta-button {
-background: #d4af37;
-color: black !important;
-padding: 10px 22px;
-border-radius: 2px;
-font-weight: 600;
-transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-background: #f1d47a;
-transform: translateY(-2px);
-}
+/* ANIMATIONS */
+.fade-up { opacity:0; transform:translateY(30px); transition:opacity 0.8s ease, transform 0.8s ease; }
+.fade-up.visible { opacity:1; transform:translateY(0); }
 
 /* ============================= */
-/* HERO WRAPPER */
-.wrapper {
-max-width: 1200px;
-margin: 40px auto;
-background: #fff;
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-min-height: 80vh;
+/* SIGNATURE EXPERIENCE & SECURITY PREMIUM */
+.signature-premium { background:#111; color:#f1d47a; padding:60px 40px; border-radius:12px; box-shadow:0 12px 30px rgba(0,0,0,0.25); margin:80px auto; max-width:1200px; }
+.signature-premium h2 { text-align:center; font-size:34px; color:#d4af37; margin-bottom:15px; }
+.signature-premium .line-gold { width:60px; height:3px; background:#d4af37; margin:0 auto 25px; }
+.signature-premium .intro { text-align:center; font-size:16px; color:#f1d47a; max-width:720px; margin:0 auto 40px; font-weight:500; }
+.signature-premium .signature-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:30px; }
+.signature-premium .card { background:#1a1a1a; border:2px solid #d4af37; padding:25px; border-radius:10px; transition: transform 0.3s ease, box-shadow 0.3s ease; text-align:center; }
+.signature-premium .card:hover { transform:translateY(-6px); box-shadow:0 12px 25px rgba(212,175,55,0.4); }
+.signature-premium .card h4 { margin-bottom:12px; color:#d4af37; font-weight:600; font-size:20px; }
+.signature-premium .card p { color:#f1d47a; font-size:14px; line-height:1.7; }
+.signature-premium .security-logo { width:100px; margin:15px auto 0; display:block; }
+
+/* ================= MOBILE ================= */
+@media (max-width:768px){
+body { padding-top:75px; }
+.luxury-header img { height:65px; }
+.hamburger { display:flex; }
+.nav-menu { max-height:0; overflow:hidden; flex-direction:column; width:100%; background:rgba(0,0,0,0.95); transition:max-height 0.4s ease; }
+.nav-menu.active { max-height:500px; padding:15px 0; }
+.nav-menu a { text-align:center; padding:10px 0; font-size:16px; }
+.wrapper { grid-template-columns:1fr; margin:0; min-height:auto; }
+.left, .center, .right { padding:35px 22px; text-align:left; }
+.right h1 { font-size:30px; }
+.section { margin:60px auto; padding:0 22px; }
+form { gap:12px; }
 }
 
-.left { padding: 60px 40px; }
-.left h2 { font-size: 30px; }
-.left .line { width: 60px; height: 3px; background: #222; margin: 15px 0 25px; }
-.left p { font-size: 14px; line-height: 1.8; max-width: 340px; }
-
-.center {
-background: #e8c7cc;
-padding: 60px 40px;
-text-align: center;
-display: flex;
-flex-direction: column;
-justify-content: center;
-}
-
-.center h3 { font-size: 18px; letter-spacing: 2px; }
-.center hr { width: 60px; margin: 15px auto; border: 1px solid #222; }
-.center p { margin: 8px 0; font-size: 14px; }
-
-.whatsapp {
-margin-top: 20px;
-padding: 12px;
-background: #25D366;
-color: #fff;
-text-decoration: none;
-border-radius: 4px;
-font-weight: 600;
-}
-
-.right { padding: 40px; text-align: right; }
-.right h1 { font-size: 44px; line-height: 1.1; }
-.right img { width: 100%; border-radius: 8px; margin: 20px 0; }
-
-.right .cta a {
-text-decoration: none;
-font-weight: 600;
-border-bottom: 2px solid #222;
-padding-bottom: 4px;
-}
-
-/* ============================= */
-/* SECTIONS */
-.section {
-max-width: 1200px;
-margin: 80px auto;
-padding: 0 40px;
-}
-
-.section h2 {
-text-align: center;
-font-size: 32px;
-margin-bottom: 20px;
-}
-
-.section .intro {
-text-align: center;
-max-width: 720px;
-margin: 0 auto 40px;
-font-size: 15px;
-color: #555;
-}
-
-.grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 30px;
-}
-
-.card {
-background: #fff;
-padding: 25px;
-border-radius: 8px;
-}
-
-.card h4 { margin-bottom: 10px; font-weight: 600; }
-
-/* ============================= */
-/* SIGNATURE PREMIUM */
-.signature-premium {
-background: #111;
-color: #f1d47a;
-padding: 60px 40px;
-border-radius: 12px;
-box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-margin: 80px auto;
-max-width: 1200px;
-}
-
-.signature-premium h2 {
-text-align: center;
-font-size: 34px;
-color: #d4af37;
-margin-bottom: 15px;
-}
-
-/* ============================= */
-/* CONTACT FORM */
-form {
-max-width: 600px;
-margin: auto;
-}
-
-form input, form textarea {
-width: 100%;
-padding: 12px;
-margin-bottom: 15px;
-border: 1px solid #ccc;
-border-radius: 4px;
-}
-
-form button {
-width: 100%;
-padding: 14px;
-background: #222;
-color: #fff;
-border: none;
-font-size: 16px;
-cursor: pointer;
-}
-
-footer {
-text-align: center;
-padding: 30px;
-background: #fff;
-margin-top: 60px;
-font-size: 14px;
-}
-
-/* ============================= */
-/* MOBILE SCROLL FIX */
-@media (max-width: 768px) {
-
-body { padding-top: 85px; }
-
-.wrapper {
-grid-template-columns: 1fr;
-margin: 0;
-min-height: auto;
-}
-
-.left,
-.center,
-.right {
-padding: 40px 22px;
-text-align: left;
-}
-
-.right h1 {
-font-size: 32px;
-line-height: 1.2;
-}
-
-.section {
-margin: 60px auto;
-padding: 0 22px;
-}
-
-.section h2 {
-font-size: 26px;
-}
-
-.card {
-padding: 22px;
-border-radius: 12px;
-box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-}
-
-}
+/* ================= SCROLLBAR PREVENT ZOOM ================= */
+input, select, textarea, button { font-size:16px; }
 </style>
 </head>
-
 <body>
 
 <!-- HEADER -->
 <header class="luxury-header">
 <div class="container">
-<a href="index.html">
-<img src="logo.png" alt="Travelling the Mother City Logo">
-</a>
-
-<div class="hamburger">
-<span></span>
-<span></span>
-<span></span>
-</div>
-
+<a href="index.html"><img src="logo.png" alt="Travelling the Mother City Logo"></a>
+<div class="hamburger"><span></span><span></span><span></span></div>
 <nav class="nav-menu">
 <a href="#experiences">Experiences</a>
 <a href="#about">About</a>
@@ -346,64 +118,118 @@ box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 </div>
 </header>
 
-<!-- HERO -->
+<!-- WRAPPER -->
 <div class="wrapper">
-<div class="left" id="about">
+<div class="left fade-up" id="about">
 <h2>About Us</h2>
 <div class="line"></div>
-<p>
-Travelling the Mother City is a Cape Town luxury travel specialist built on deep local knowledge.
-We design private, curated experiences that combine luxury accommodation, cultural immersion,
-private drivers, and iconic destinations — delivered with comfort, safety, and authenticity.
-Cape Town is a unique destination with world-renowned scenery.
-</p>
+<p>Travelling the Mother City is a Cape Town luxury travel specialist built on deep local knowledge. We design private, curated experiences that combine luxury accommodation, cultural immersion, private drivers, and iconic destinations — delivered with comfort, safety, and authenticity.</p>
 </div>
 
-<div class="center">
+<div class="center fade-up">
 <h3>VIP CONTACT</h3>
 <hr>
 <p>info@mothercity.co.za</p>
 <a class="whatsapp" href="https://wa.me/27834491612" target="_blank">WhatsApp Us</a>
 </div>
 
-<div class="right">
+<div class="right fade-up">
 <h1>Travelling<br>the<br>Mother City</h1>
-<img src="https://static.vecteezy.com/system/resources/previews/028/159/350/large_2x/sunset-over-table-mountain-and-downtown-cape-town-south-africa-aerial-panoramic-view-of-cape-town-cityscape-at-sunset-ai-generated-free-photo.jpg" alt="Luxury Cape Town cityscape with Table Mountain at sunset">
-<div class="cta">
-<p>Luxury · Culture · Local Expertise</p>
-<a href="#contact">Design My Private Experience</a>
-</div>
+<img loading="lazy" src="https://static.vecteezy.com/system/resources/previews/028/159/350/large_2x/sunset-over-table-mountain-and-downtown-cape-town-south-africa-aerial-panoramic-view-of-cape-town-cityscape-at-sunset-ai-generated-free-photo.jpg" alt="Luxury Cape Town cityscape with Table Mountain at sunset">
+<div class="cta"><p>Luxury · Culture · Local Expertise</p><a href="#contact">Design My Private Experience</a></div>
 </div>
 </div>
 
 <!-- EXPERIENCES -->
-<section id="experiences" class="section">
+<section id="experiences" class="section fade-up">
 <h2>Signature Experiences</h2>
-<p class="intro">Private and small-group curated experiences delivered with discretion and luxury.</p>
+<p class="intro">Our experiences are private or small-group only and curated in partnership with trusted local communities.</p>
+<div class="grid">
+<div class="card"><h4>Luxury Accommodation</h4></div>
+<div class="card"><h4>Private Driver & Chauffeur</h4></div>
+<div class="card"><h4>Signature Cultural Experience</h4></div>
+<div class="card"><h4>Wine Estates</h4></div>
+<div class="card"><h4>Ocean Experiences</h4></div>
+<div class="card"><h4>Curated Beaches</h4></div>
+<div class="card"><h4>Bucket-list Activities</h4></div>
+</div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section">
+<!-- SIGNATURE & SECURITY -->
+<section id="signature" class="section signature-premium fade-up">
+<h2>Signature Experience & Security Specialist</h2>
+<div class="line-gold"></div>
+<p class="intro">We partner with <a href="https://hawkassociates.co.za" target="_blank" style="color:#d4af37;font-weight:bold;text-decoration:underline;">Hawk Associates</a> providing expert security services.</p>
+<div class="grid signature-grid">
+<div class="card">
+<h4>Security Specialist</h4>
+<p>Professional security experts ensure discreet, private, and safe journeys in Cape Town.</p>
+<img src="hawk-logo.png" alt="Hawk Associates Logo" class="security-logo">
+</div>
+<div class="card">
+<h4>Exclusive Signature Experience</h4>
+<p>Unique private experiences designed by our local experts. Tailored adventures for your preferences.</p>
+</div>
+</div>
+</section>
+
+<!-- BOOKING FORM -->
+<section id="contact" class="section fade-up">
 <h2>Book Your Experience</h2>
 <form action="https://formspree.io/f/mwvnvlqg" method="POST">
 <input type="text" name="name" placeholder="Full Name" required>
 <input type="email" name="email" placeholder="Email Address" required>
-<textarea name="message" rows="5" placeholder="Tell us about your Cape Town plans"></textarea>
+<input type="tel" name="phone" placeholder="Phone Number">
+<label>Travel Dates:</label>
+<input type="date" name="start_date" required>
+<input type="date" name="end_date" required>
+<label>Number of Guests:</label>
+<select name="guests" required>
+<option value="">Select</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4+</option>
+</select>
+<label>Type of Experience:</label>
+<select name="experience_type" required>
+<option value="">Select</option>
+<option>Cultural</option>
+<option>Wine & Dine</option>
+<option>Adventure</option>
+<option>Custom</option>
+</select>
+<label>Accommodation Preference:</label>
+<select name="accommodation">
+<option value="">Select</option>
+<option>Villa</option>
+<option>Boutique Hotel</option>
+<option>Apartment</option>
+</select>
+<textarea name="message" rows="5" placeholder="Special Requests or Notes"></textarea>
 <button type="submit">Submit Request</button>
+<p style="font-size:12px; text-align:center; color:#666;">We respond personally within 24 hours.</p>
 </form>
 </section>
 
-<footer>
-© 2025 Travelling the Mother City · Cape Town Luxury Travel Specialists
-</footer>
+<footer>© 2025 Travelling the Mother City · Cape Town Luxury Travel Specialists</footer>
 
 <script>
+// Fade-up animations
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('visible'); }});
+}, { threshold: 0.15 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// Hamburger menu
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
-hamburger.addEventListener('click', () => {
-navMenu.classList.toggle('active');
+hamburger.addEventListener('click', ()=>{ navMenu.classList.toggle('active'); });
+document.querySelectorAll('.nav-menu a').forEach(link=>{
+link.addEventListener('click', ()=>{ if(navMenu.classList.contains('active')){ navMenu.classList.remove('active'); }});
 });
 </script>
 
 </body>
 </html>
+
